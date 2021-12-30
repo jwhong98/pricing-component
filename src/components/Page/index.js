@@ -13,10 +13,12 @@ const Page = () => {
     <PageContainer>
       <PageTitle>our pricing</PageTitle>
       <PlanOptions>
-        <Option></Option>
+        <Option>annually</Option>
         <Switch></Switch>
-        <Option></Option>
+        <Option>monthly</Option>
       </PlanOptions>
+      <Card />
+      <Card />
       <Card />
     </PageContainer>
   );
