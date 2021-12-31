@@ -25,6 +25,7 @@ export const PlanOptions = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 70px;
+  align-items: center;
 `;
 
 export const Option = styled.p`

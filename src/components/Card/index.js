@@ -2,6 +2,7 @@ import React from "react";
 import {
   CardContainer,
   CardTitle,
+  PriceWrap,
   Span,
   CardPrice,
   CardMenu,
@@ -11,17 +12,18 @@ import {
 
 const Card = (props) => {
   return (
-    <CardContainer>
-      <CardTitle>Type</CardTitle>
-      <CardPrice>
-        <Span>$</Span>19.99
-      </CardPrice>
-      <CardMenu>
-        <MenuItem>storage</MenuItem>
-        <MenuItem>users allowed</MenuItem>
-        <MenuItem>send up to</MenuItem>
+    <CardContainer dark={props.dark}>
+      <CardTitle dark={props.dark}>{props.type}</CardTitle>
+      <PriceWrap dark={props.dark}>
+        <Span>$</Span>
+        <CardPrice>{props.price}</CardPrice>
+      </PriceWrap>
+      <CardMenu dark={props.dark}>
+        <MenuItem>{props.storage} storage</MenuItem>
+        <MenuItem>{props.users} users allowed</MenuItem>
+        <MenuItem>send up to {props.send} GB</MenuItem>
       </CardMenu>
-      <CardButton>learn more</CardButton>
+      <CardButton dark={props.dark}>learn more</CardButton>
     </CardContainer>
   );
 };

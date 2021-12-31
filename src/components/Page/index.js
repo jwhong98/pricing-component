@@ -1,12 +1,8 @@
 import React from "react";
 import Card from "../Card";
-import {
-  PageContainer,
-  PageTitle,
-  PlanOptions,
-  Option,
-  Switch,
-} from "./PageElements";
+import { planOne, planThree, planTwo } from "./data";
+import { PageContainer, PageTitle, PlanOptions, Option } from "./PageElements";
+import Switch from "@mui/material/Switch";
 
 const Page = () => {
   return (
@@ -14,12 +10,12 @@ const Page = () => {
       <PageTitle>our pricing</PageTitle>
       <PlanOptions>
         <Option>annually</Option>
-        <Switch></Switch>
+        <Switch />
         <Option>monthly</Option>
       </PlanOptions>
-      <Card />
-      <Card />
-      <Card />
+      <Card {...planOne} />
+      <Card {...planTwo} />
+      <Card {...planThree} />
     </PageContainer>
   );
 };
